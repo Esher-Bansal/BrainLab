@@ -3,7 +3,11 @@ import 'package:brainlab/screens/home.dart';
 import 'package:brainlab/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'games/verbal_memory.dart';
 import 'games/visual_memory.dart';
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -25,10 +29,11 @@ class MyApp extends StatelessWidget {
         platform: TargetPlatform.android,
       ),
       initialRoute:
-          '/visual', //(uid == null || uid == 'LoggedOut') ? '/auth' : '/mainMenu',
+          '/verbal',
+          //'/visual', //(uid == null || uid == 'LoggedOut') ? '/auth' : '/mainMenu',
       routes: {
         '/home': (context) => const HomeScreen(),
-        //'/verbal': (context) => VerbalMemory(),
+        '/verbal': (context) => VerbalMemory(),
         '/visual': (context) => VisualMemory(),
 /*         '/': (context) => InnerWrapper(),
         '/mainMenu': (context) => MainMenu(),

@@ -47,7 +47,7 @@ class _VerbalMemoryState extends State<VerbalMemory> {
     dictRequest();
     super.initState();
   } */
-
+//
 
 
 // void dictRequest() async {
